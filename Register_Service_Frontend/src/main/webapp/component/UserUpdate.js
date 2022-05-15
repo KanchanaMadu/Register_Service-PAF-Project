@@ -48,17 +48,24 @@ $(document).ready(
 	}
 	
 	$(document).on("click", "#btnSave", function(event) {
-
-		const queryString = window.location.search;			
-		const urlParams = new URLSearchParams(queryString);			
-		const id = urlParams.get('id');			
-		if(id != null){
-			updateUser(id,event);
+		var $formUser = $('#formUser');
+		if ($formUser[0].checkValidity()) {
+		
+			const queryString = window.location.search;			
+			const urlParams = new URLSearchParams(queryString);			
+			const id = urlParams.get('id');			
+			if(id != null){
+				updateUser(id,event);
+			}else{
+				alert('error in Update');				
+				var url = 'http://localhost:8080/Register_Service_Frontend/userTable.jsp'
+				window.location = url;
+			}		
+			
 		}else{
-			alert('error in Update');				
-			var url = 'http://localhost:8080/Register_Service_Frontend/userTable.jsp'
-			window.location = url;
-		}		
+			 $formUser.find('input[type=image]').click()
+		}
+		
 		
 	});
 	
