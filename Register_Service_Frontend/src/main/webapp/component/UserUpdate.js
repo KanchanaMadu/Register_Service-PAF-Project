@@ -12,7 +12,7 @@ $(document).ready(
 					getUser(id);
 				}else{
 					alert("error in Update");				
-					var url = 'http://localhost:8080/testSevlet/userTable.jsp';
+					var url = 'http://localhost:8080/Register_Service_Frontend/userTable.jsp';
 					window.location = url;
 				}
 	});
@@ -56,7 +56,7 @@ $(document).ready(
 			updateUser(id,event);
 		}else{
 			alert('error in Update');				
-			var url = 'http://localhost:8080/testSevlet/userTable.jsp'
+			var url = 'http://localhost:8080/Register_Service_Frontend/userTable.jsp'
 			window.location = url;
 		}		
 		
@@ -86,7 +86,7 @@ function updateUser(id,event) {
 			  success: function(res){
 				  console.log(res);
 				  alert(res);				  
-				  var url = 'http://localhost:8080/testSevlet/userTable.jsp';
+				  var url = 'http://localhost:8080/Register_Service_Frontend/userTable.jsp';
 				window.location = url;
 			  },
 			  dataType: "json",

@@ -25,7 +25,7 @@ $(document).ready(
 			});
 			
 			$(document).on("click",".edit",	function() {
-				var url = 'http://localhost:8080/testSevlet/userUpdate.jsp?id='+ $(this).parents("tr").data('id');
+				var url = 'http://localhost:8080/Register_Service_Frontend/userUpdate.jsp?id='+ $(this).parents("tr").data('id');
 				window.location = url;
 						
 			});
@@ -94,35 +94,8 @@ function deletUser(id) {
 	$.ajax({
 	    url: deletUrl,
 	    type: 'DELETE',
-	    complete : function(response, status) 
-	    { 
-	    onItemDeleteComplete(response.responseText, status); 
-	    } 
+	    
 	});
 	
-	function onItemDeleteComplete(response, status) 
-	{ 
-	if (status == "success") 
-	 { 
-	 var resultSet = JSON.parse(response); 
-	 if (resultSet.status.trim() == "success") 
-	 { 
-	 $("#alertSuccess").text("Successfully deleted."); 
-	 $("#alertSuccess").show(); 
-	 $("#divItemsGrid").html(resultSet.data); 
-	 } else if (resultSet.status.trim() == "error") 
-	 { 
-	 $("#alertError").text(resultSet.data); 
-	 $("#alertError").show(); 
-	 } 
-	 } else if (status == "error") 
-	 { 
-	 $("#alertError").text("Error while deleting."); 
-	 $("#alertError").show(); 
-	 } else
-	 { 
-	 $("#alertError").text("Unknown error while deleting.."); 
-	 $("#alertError").show(); 
-	 } 
-	}
+	
 }

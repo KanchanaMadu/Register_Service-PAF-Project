@@ -17,7 +17,7 @@
 
 <div class="container pt-3">
 <h1 class="text-center" style="color: #4835d4;">Add New User</h1>
-	<form class = "card p-3 bg-light" id="formUser" name="formUser" method="post" action="http://localhost:8080/testSevlet/userTable.jsp">
+	<form class = "card p-3 bg-light" id="formUser" name="formUser" method="post" action="http://localhost:8080/Register_Service_Frontend/userTable.jsp">
 		<div class="form-group">
 			<label for="firstName">First Name</label> <input type="text"
 				class="form-control" id="firstName" name="firstName"

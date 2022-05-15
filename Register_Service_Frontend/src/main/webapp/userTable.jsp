@@ -152,7 +152,7 @@ function deletUser(id) {
 		<div class="row">
 			<div class="col-md-3">
 				<div class="container pb-1" style="font-size: 30px;">
-					<a href="NewFile.jsp" class="btn btn-info">Add New User</a>
+					<a href="userInsert.jsp" class="btn btn-info">Add New User</a>
 				</div>
 			</div>
 		</div>
